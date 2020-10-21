@@ -54,3 +54,8 @@ float caseStudy2_exposeSurface = ((exposedToSun(caseStudy1,point)) +
    
 	return 0; 
 } 
+/*
+Output
+8
+11.5
+*/
