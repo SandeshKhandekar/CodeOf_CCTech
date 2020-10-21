@@ -38,8 +38,7 @@ public class Polygon2 {
 		return (val > 0) ? 1 : 2; 
 	} 
 
-	static boolean doIntersect(Point p1, Point q1, 
-							Point p2, Point q2) 
+	static boolean doIntersect(Point p1, Point q1,Point p2, Point q2) 
 	{ 
 		int o1 = orientation(p1, q1, p2); 
 		int o2 = orientation(p1, q1, q2); 
@@ -73,7 +72,6 @@ public class Polygon2 {
 
 		return false; 
 	} 
-
 	static boolean isInside(Point polygon[], Point p) 
 	{ 
 		int n = polygon.length;
@@ -81,9 +79,7 @@ public class Polygon2 {
 		{ 
 			return false; 
 		} 
-
 		Point extreme = new Point(INF, p.y); 
-
 		int count = 0, i = 0; 
 		do
 		{ 
@@ -93,10 +89,8 @@ public class Polygon2 {
 			{ 
 				if (orientation(polygon[i], p, polygon[next]) == 0) 
 				{ 
-					return OnLine(polygon[i], p, 
-									polygon[next]); 
+					return OnLine(polygon[i], p,polygon[next]); 
 				} 
-
 				count++; 
 			} 
 			i = next; 
@@ -106,10 +100,9 @@ public class Polygon2 {
 	public static void main(String[] args) 
 	{ 
 		Point polygon1[] = {new Point(1,0), 
-							new Point(8, 3), 
-							new Point(8,8), 
-							new Point(1,5)}; 
-		 
+					new Point(8, 3), 
+					new Point(8,8), 
+					new Point(1,5)}; 
 		Point p = new Point(3,5); 
 		if (isInside(polygon1, p)) 
 		{ 
@@ -133,9 +126,11 @@ public class Polygon2 {
 		else
 		{ 
 			System.out.println("False"); 
-		}
-		
+		}	
 	} 
-
-
 }
+/*
+Output :
+True
+False
+*/
